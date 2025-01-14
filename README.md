@@ -39,3 +39,89 @@ AudEmo/
 ├── test_prediction.py      # Script for testing and evaluating unseen data
 ├── README.md               # Project documentation
 └── requirements.txt        # Python dependencies
+```
+
+---
+
+## **Installation**
+
+### Prerequisites
+1. Python 3.8 or higher.
+2. Required Python libraries:
+   - TensorFlow
+   - NumPy
+   - Librosa
+   - Scikit-learn
+   - Matplotlib
+
+### Steps
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/username/AudEmo.git
+   cd AudEmo
+   ```
+
+2. Install the required dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Ensure the dataset is placed in the correct path (e.g., `./TESS Toronto emotional speech set data`).
+
+---
+
+## **Usage**
+
+### 1. **Data Preparation**
+Prepare the dataset by extracting log-mel spectrogram features:
+```bash
+python 01_data_preparation.py
+```
+
+### 2. **Data Splitting**
+Split the data into training, validation, and test sets:
+```bash
+python 02_data_splitting.py
+```
+
+### 3. **Model Training**
+Train the model on the prepared dataset:
+```bash
+python 03_model_training.py
+```
+
+### 4. **Testing**
+Run predictions on the test dataset:
+```bash
+python test_prediction.py
+```
+
+---
+
+## **Results**
+
+- **Model Accuracy:** 99%
+- **Performance Metrics (Precision, Recall, F1-Score):**
+  | Emotion          | Precision | Recall | F1-Score |
+  |------------------|-----------|--------|----------|
+  | Angry            | 98%       | 99%    | 99%      |
+  | Fear             | 97%       | 98%    | 98%      |
+  | Happy            | 99%       | 98%    | 99%      |
+  | Neutral          | 99%       | 99%    | 99%      |
+  | Sad              | 98%       | 97%    | 98%      |
+  | Disgust          | 96%       | 95%    | 96%      |
+  | Pleasant Surprise| 98%       | 99%    | 99%      |
+
+**Macro Averages**
+- **Precision:** 98.0%
+- **Recall:** 98.1%
+- **F1-Score:** 98.0%
+---
+
+## **Future Work**
+
+1. Real-time emotion detection.
+2. Support for multilingual datasets.
+3. Mobile and edge device optimization.
+4. Explore advanced architectures like CRNNs or Transformers.
