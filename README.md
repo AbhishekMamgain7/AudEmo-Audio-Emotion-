@@ -46,7 +46,7 @@ AudEmo/
 ## **Installation**
 
 ### Prerequisites
-1. Python 3.8 or higher.
+1. Python 3.10.0
 2. Required Python libraries:
    - TensorFlow
    - NumPy
