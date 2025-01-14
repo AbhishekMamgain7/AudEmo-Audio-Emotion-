@@ -1,0 +1,7 @@
+librosa==0.10.2.post1
+numpy==1.26.4
+scikit-learn==1.5.2
+tensorflow==2.10.1
+matplotlib==3.9.2
+seaborn==0.13.2
+pickle
