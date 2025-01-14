@@ -5,8 +5,8 @@ import tensorflow as tf
 model = tf.keras.models.load_model('best_model.keras')
 
 # Load test data
-X_test = np.load('./processed_data/X_test.npy')
-y_test = np.load('./processed_data/y_test.npy')
+X_test = np.load('./test_data/X_test.npy')
+y_test = np.load('./test_data/y_test.npy')
 
 # Evaluate model
 loss, accuracy = model.evaluate(X_test, y_test)
