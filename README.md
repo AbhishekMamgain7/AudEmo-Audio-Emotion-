@@ -53,7 +53,7 @@ AudEmo/
    - Librosa
    - Scikit-learn
    - Matplotlib
-
+3. [Toronto emotional speech set (TESS)](https://www.kaggle.com/datasets/ejlok1/toronto-emotional-speech-set-tess) Dataset.
 ### Steps
 
 1. Clone the repository:
@@ -102,21 +102,11 @@ python test_prediction.py
 ## **Results**
 
 - **Model Accuracy:** 99%
-- **Performance Metrics (Precision, Recall, F1-Score):**
-  | Emotion          | Precision | Recall | F1-Score |
-  |------------------|-----------|--------|----------|
-  | Angry            | 98%       | 99%    | 99%      |
-  | Fear             | 97%       | 98%    | 98%      |
-  | Happy            | 99%       | 98%    | 99%      |
-  | Neutral          | 99%       | 99%    | 99%      |
-  | Sad              | 98%       | 97%    | 98%      |
-  | Disgust          | 96%       | 95%    | 96%      |
-  | Pleasant Surprise| 98%       | 99%    | 99%      |
 
 **Macro Averages**
-- **Precision:** 98.0%
-- **Recall:** 98.1%
-- **F1-Score:** 98.0%
+- **Precision:** 99.31%
+- **Recall:** 99.29%
+- **F1-Score:** 99.29%
 ---
 
 ## **Future Work**
