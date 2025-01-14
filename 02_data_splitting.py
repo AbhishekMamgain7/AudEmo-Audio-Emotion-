@@ -1,3 +1,4 @@
+import os
 import pickle
 import numpy as np
 from sklearn.model_selection import train_test_split
@@ -6,6 +7,7 @@ from tensorflow.keras.utils import to_categorical
 
 # Paths
 PROCESSED_DATA_PATH = "./processed_data"
+TEST_DATA_PATH = "./test_data"
 
 # Load data
 try:
@@ -49,11 +51,12 @@ X_train, X_temp, y_train, y_temp = train_test_split(features, labels_categorical
 X_val, X_test, y_val, y_test = train_test_split(X_temp, y_temp, test_size=0.5, random_state=42)
 
 # Save splits
+os.makedirs(TEST_DATA_PATH, exist_ok=True)
 np.save(f"{PROCESSED_DATA_PATH}/X_train.npy", X_train)
 np.save(f"{PROCESSED_DATA_PATH}/X_val.npy", X_val)
-np.save(f"{PROCESSED_DATA_PATH}/X_test.npy", X_test)
+np.save(f"{TEST_DATA_PATH}/X_test.npy", X_test)
 np.save(f"{PROCESSED_DATA_PATH}/y_train.npy", y_train)
 np.save(f"{PROCESSED_DATA_PATH}/y_val.npy", y_val)
-np.save(f"{PROCESSED_DATA_PATH}/y_test.npy", y_test)
+np.save(f"{TEST_DATA_PATH}/y_test.npy", y_test)
 
 print("Data splitting complete!")
