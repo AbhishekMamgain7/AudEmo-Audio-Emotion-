@@ -1,0 +1,54 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+env/
+
+# Dataset (large audio files â€” do not commit)
+TESS Toronto emotional speech set data/
+
+# Uploaded audio files (runtime only)
+uploads/
+
+# Test / scratch data
+test_data/
+
+# Local environment
+.env
+*.env.local
+
+# IDE
+.vscode/
+.idea/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+# Training data — too large for git (regenerate with 04_sequence_generation.py)
+processed_data/features.pkl
+processed_data/X_train.npy
+processed_data/X_val.npy
+processed_data/X_train_seq.npy
+processed_data/X_val_seq.npy
+processed_data/X_test_seq.npy
+processed_data/X_train_probs.npy
+processed_data/X_val_probs.npy
+processed_data/X_test_probs.npy
+processed_data/labels.pkl
+processed_data/train_lengths.npy
+processed_data/val_lengths.npy
+processed_data/test_lengths.npy
+processed_data/y_train.npy
+processed_data/y_val.npy
+processed_data/y_train_seq.npy
+processed_data/y_val_seq.npy
+processed_data/y_test_seq.npy
