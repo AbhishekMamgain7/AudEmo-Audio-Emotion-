@@ -8,8 +8,17 @@ PROCESSED_DATA_PATH = "./processed_data"
 TEST_DATA_PATH = "./test_data"
 RESULT_DATA_PATH = "./results"
 
-# Load the trained model
-model = tf.keras.models.load_model(MODEL_PATH)
+# Load the trained model robustly
+import os
+import shutil
+try:
+    model = tf.keras.models.load_model(MODEL_PATH)
+except Exception as e:
+    h5_path = MODEL_PATH.replace('.keras', '.h5')
+    if not os.path.exists(h5_path):
+        shutil.copy(MODEL_PATH, h5_path)
+    model = tf.keras.models.load_model(h5_path)
+model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 
 # Load test data
 X_test = np.load(f"{TEST_DATA_PATH}/X_test.npy")
